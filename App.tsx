@@ -9,7 +9,7 @@ export default function App() {
     // gts-ignore
     <TailwindProvider utilities={utilities}>
      <CustomersScreen />
-   </TailwindProvider>
+    </TailwindProvider>
     
   );
 }
