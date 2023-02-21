@@ -6,7 +6,7 @@ export default function CustomersScreen() {
     const tw = useTailwind(); 
   return (
     <SafeAreaView>
-      <Text style={tw("")}>CustomersScreen</Text>
+      <Text style={tw("text-blue-500")}>CustomersScreen</Text>
     </SafeAreaView>
   )
 }
