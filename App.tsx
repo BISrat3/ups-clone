@@ -1,3 +1,4 @@
+import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import {TailwindProvider} from 'tailwind-rn';
@@ -8,7 +9,9 @@ export default function App() {
   return (
     // gts-ignore
     <TailwindProvider utilities={utilities}>
-     <CustomersScreen />
+      <NavigationContainer>
+        <CustomersScreen />
+      </NavigationContainer>
     </TailwindProvider>
     
   );
