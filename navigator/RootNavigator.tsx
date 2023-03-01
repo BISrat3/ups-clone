@@ -9,6 +9,9 @@ export type RootStackParamList = {
     userId : string;
     name: string;
   }
+  Order :{
+    order:any
+  }
 }
 
 const RootStack = createNativeStackNavigator()
