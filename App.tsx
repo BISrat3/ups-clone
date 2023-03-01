@@ -7,7 +7,7 @@ import utilities from './tailwind.json';
 
 export default function App() {
   return (
-    // gts-ignore
+    // gts-ignore - TailwindProvider is missing a type definition
     <TailwindProvider utilities={utilities}>
       <NavigationContainer>
         <CustomersScreen />
