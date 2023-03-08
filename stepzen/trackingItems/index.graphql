@@ -11,7 +11,7 @@ type TrackingItems {
 }
 
 type TrackingItemsList {
-  name: Id
+  name: ID
   value: TrackingItems
 }
 
