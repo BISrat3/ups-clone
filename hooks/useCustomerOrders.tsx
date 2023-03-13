@@ -4,14 +4,14 @@ import { GET_ORDERS } from '../graphql/queries'
 
 const useCustomerOrders = () => {
     const {loading, error, data} = useQuery(GET_ORDERS)
-    const [Orders, setOrders] = useState <Order[]>([])
+    const [orders, setOrders] = useState <Order[]>([])
 
     useEffect(() =>{
         if(!data)
             return;
 //  create order array and access the order 
-//  transforming the data that we would like to use in
-        const orders: Order [] = data.getOrders.map(({value}: OrderResponse)=> ({
+//  transforming the data that we would like to use or manipulate in
+        const orders: Order[] = data.getOrders.map(({value}: OrderResponse)=> ({
             carrier: value.carrier,
             createdAt: value.createdAt,
             shippingCost: value.shippingCost,
@@ -20,8 +20,9 @@ const useCustomerOrders = () => {
             Address: value.Address,
             City: value.city,
             Lat: value.Lat,
-            Lng: value.img,
+            Lng: value.Lng,
         }))
+        setOrders(orders)
     }, [data])
 
   return (
