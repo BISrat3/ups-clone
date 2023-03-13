@@ -18,16 +18,16 @@ const useCustomerOrders = () => {
             trackingId: value.trackingId,
             trackingItems: value.trackingItems,
             Address: value.Address,
-            City: value.city,
+            City: value.City,
             Lat: value.Lat,
             Lng: value.Lng,
         }))
         setOrders(orders)
     }, [data])
 
-  return (
-    <div></div>
-  )
+  return {
+    loading, error, orders
+  }
 }
 
 export default useCustomerOrders
