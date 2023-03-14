@@ -11,6 +11,7 @@ import { Image } from '@rneui/base';
 import { Input } from '@rneui/themed';
 import { GET_CUSTOMERS } from '../graphql/queries';
 import { useQuery } from '@apollo/client';
+import CustomerCard from '../components /CustomerCard';
 
 export type CustomersScreenNavigationProp = CompositeNavigationProp<
   BottomTabNavigationProp<TabStackParamList, "Customers">, NativeStackNavigationProp<RootStackParamList>
@@ -45,7 +46,7 @@ export type CustomersScreenNavigationProp = CompositeNavigationProp<
       />
 
       {data?.getCustomers.map(({name: ID, value:{ email, name}}: CustomerResponse) => (
-
+        <CustomerCard key={ID} email= {email} name ={name} userId={ID}/>
       ))}
     </ScrollView>
   )
