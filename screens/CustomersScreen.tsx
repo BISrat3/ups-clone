@@ -46,7 +46,7 @@ export type CustomersScreenNavigationProp = CompositeNavigationProp<
       />
 
       {data?.getCustomers.map(({name: ID, value:{ email, name}}: CustomerResponse) => (
-        <CustomerCard key={ID} email= {email} name ={name} userId={ID}/>
+        <CustomerCard key={ID} email={email} name={name} userId={ID}/>
       ))}
     </ScrollView>
   )
