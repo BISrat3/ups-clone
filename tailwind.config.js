@@ -1,5 +1,6 @@
 module.exports = {
-  content: ["./**/*.tsx"],
+  // in tailwind we used content to search for the specific file
+  content: ['./**/*.tsx'],
   theme: {
     extend: {},
   },

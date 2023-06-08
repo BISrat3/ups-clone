@@ -2,9 +2,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet} from 'react-native';
 import {TailwindProvider} from 'tailwind-rn';
+import utilities from './tailwind.json';
 import RootNavigator from './navigator/RootNavigator';
 import CustomersScreen from './screens/CustomersScreen';
-import utilities from './tailwind.json';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 
 const client = new ApolloClient({
