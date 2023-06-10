@@ -12,6 +12,7 @@ import { Input } from '@rneui/themed';
 import { GET_CUSTOMERS } from '../graphql/queries';
 import { useQuery } from '@apollo/client';
 import CustomerCard from '../components /CustomerCard';
+import CustomerList from '../components /CustomerList';
 
 export type CustomersScreenNavigationProp = CompositeNavigationProp<
   BottomTabNavigationProp<TabStackParamList, "Customers">, NativeStackNavigationProp<RootStackParamList>
