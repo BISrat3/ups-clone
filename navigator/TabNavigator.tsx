@@ -7,6 +7,7 @@ import OrdersScreen from '../screens/OrdersScreen'
 import { useNavigation } from '@react-navigation/native'
 import { Icon } from '@rneui/themed';
 
+// these are the typing definitions 
 export type TabStackParamList = {
   Customers: undefined;
   Orders: undefined;
@@ -14,10 +15,9 @@ export type TabStackParamList = {
 const Tab = createBottomTabNavigator<TabStackParamList>()
 
 const TabNavigator = () => {
-  // not show a navigator 
+  // not show a navigator or header
   const navigation = useNavigation();
   
-
   useLayoutEffect (() => {
     //  to get rid of the navigator main
     navigation.setOptions ({
