@@ -19,27 +19,28 @@ const TabNavigator = () => {
   const navigation = useNavigation();
   
   useLayoutEffect (() => {
-    //  to get rid of the navigator main
+    //  to get rid of the navigator menu
     navigation.setOptions ({
       headerShown: false,
     })
   }, [])
   return (
-    <Tab.Navigator screenOptions = {({route}) => ( {
-      // customization 
-      tabBarActiveTintColor: "#59C1CC",
-      tabBarInactiveTintColor: "gray",
-      tabBarIcon: ({ focused, color, size}) => {
-        if(route.name ==='Customers'){
-          return (
-            <Icon
-              name="users"
-              type="entypo"
-              color={focused ? "#59C1CC": "gray"}
-            />
-          )
-        }
-        else if(route.name ==="Orders"){
+    <Tab.Navigator 
+      screenOptions = {({route}) => ( {
+      // customization different customization below
+        tabBarActiveTintColor: "#59C1CC",
+        tabBarInactiveTintColor: "gray",
+        tabBarIcon: ({ focused, color, size}) => {
+          if(route.name ==='Customers'){
+            return (
+              <Icon
+                name="users"
+                type="entypo"
+                color={focused ? "#59C1CC": "gray"}
+              />
+            )
+          }
+          else if(route.name ==='Orders'){
           return (
             <Icon
               name= "box"

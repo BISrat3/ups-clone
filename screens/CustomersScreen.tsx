@@ -20,17 +20,20 @@ export type CustomersScreenNavigationProp = CompositeNavigationProp<
 
  const CustomersScreen = () => {
   const tw = useTailwind(); 
+  // hide the header navigator 
   const navigation = useNavigation<CustomersScreenNavigationProp>()
   const [input, setInput] = useState<string>('');
   const {loading, error, data} = useQuery(GET_CUSTOMERS)
 
   useLayoutEffect(()=> {
+    // when the UI mount 
     navigation.setOptions({
       headerShown: false,
     })
   }, [])
   
   return (
+    // scrollview will help us to move while we are moving it. 
     <ScrollView style={{backgroundColor: "#59C1CC"}}>
       {/* <Text style={tw("text-blue-500")}>CustomersScreen</Text> */}
       <Image 
