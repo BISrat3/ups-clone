@@ -1,18 +1,18 @@
-type Order {
-  carrier: String,
-  createdAt: Date,
-  shippingCost: Int,
-  trackingId: String,
-  Address: String,
-  City: String,
-  Lat: Float,
-  Lng: Float,
-  trackingItem: TrackingItems
-    @materializer(
-      query: "getTrackingItemById"
-      arguments: [{name: "id", field: "trackingId"}]
-    )
-}
+# type Order {
+#   carrier: String,
+#   createdAt: Date,
+#   shippingCost: Int,
+#   trackingId: String,
+#   Address: String,
+#   City: String,
+#   Lat: Float,
+#   Lng: Float,
+#   trackingItem: TrackingItems
+#     @materializer(
+#       query: "getTrackingItemById"
+#       arguments: [{name: "id", field: "trackingId"}]
+#     )
+# }
 
 type OrderList {
   name: ID

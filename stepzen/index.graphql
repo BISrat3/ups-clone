@@ -5,6 +5,7 @@ schema
       "trackingItems/index.graphql"
       "customer/index.graphql"
       "order-01/index.graphql"
+      "trackingItems-01/index.graphql"
     ]
   ) {
   query: Query
