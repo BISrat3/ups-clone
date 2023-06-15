@@ -24,10 +24,10 @@ type OrdersItems {
     )
 }
 
-# type OrderList {
-#   name: ID
-#   value: Order
-# }
+type OrderList {
+  name: ID
+  value: Order
+}
 
 type Query {
   getOrderById(id: ID!): Order
