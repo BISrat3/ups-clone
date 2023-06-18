@@ -8,8 +8,7 @@ export const GET_CUSTOMERS = gql`
             }
             name
         }
-    }
-`
+    }`
 
 export const GET_ORDERS = gql`
     query GetOrders {
