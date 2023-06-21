@@ -11,20 +11,23 @@ function useCustomerOrders(userId: string) {
         if(!data)
         return;
         
+        // transforming the data that we want to play on the front end
         const orders: Order[] = data.getOrders.map(({value}: OrderResponse) => ({
             carrier: value.carrier,
             createdAt: value.createdAt,
             shippingCost: value.shippingCost,
             trackingId: value.trackingId,
-            trackingItems: value.trackingItems,
+            trackingItems: value.trakingItems,
             Address: value.Address,
             City: value.City,
             Lat: value.Lat,
             Lng: value.Lng,
         }))
         const customerOrders = orders.filter(
-            (order) => order.trackingItems.customer_id === userId
+          // checking for every orders that I'm taking in 
+            (order) => order.trakingItems.customer_id === userId
         )
+        // then I set the order to customers orders
         setOrders(customerOrders)
     }, [data, userId])
 

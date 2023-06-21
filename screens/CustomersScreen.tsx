@@ -54,7 +54,8 @@ export type CustomersScreenNavigationProp = CompositeNavigationProp<
           customer.value.name.includes(input)
           )
         .map(
-        ({name: ID, value:{ email, name}}: CustomerResponse) => (
+        ({name: ID, value:{ email, name}}: 
+          CustomerResponse) => (
           <CustomerCard 
             key={ID}
             email={email} 
