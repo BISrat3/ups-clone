@@ -3,6 +3,7 @@ import { useQuery } from '@apollo/client'
 import { GET_ORDERS } from '../graphql/queries'
 
 function useCustomerOrders(userId: string) {
+  // when i want data from the graphql - we use destructuring object- loading, error and data- Get_order function 
     const {loading, error, data} = useQuery(GET_ORDERS)
     const [orders, setOrders] = useState <Order[]>([])
 
