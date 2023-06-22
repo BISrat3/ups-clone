@@ -12,7 +12,9 @@ type Props = {
   email: string;
 }
 
-const CustomerCard = ({userId, name, email}: Props) => {
+
+const CustomerCard = ({email, name, userId}: Props) => {
+  // destructure the props into userId, name, email
   const {loading, error, orders} = useCustomerOrders(userId)
   const tw = useTailwind();
   const navigation = useNavigation<CustomersScreenNavigationProp>()
@@ -21,14 +23,14 @@ const CustomerCard = ({userId, name, email}: Props) => {
     <TouchableOpacity>
       <Card containerStyle={tw("p-5 rounded-lg")}>
         <View>
-          <View>
-            <View style={tw("flex-row justifying-between")}>
+          <View style={tw("flex-row justifying-between")}>
+            <View >
               <Text style={tw("text-2xl font-bold")}>{name}</Text>
-              <Text style={[tw("text-sm"),{color:"59C1CC"}]}>ID: {userId}</Text>
+              <Text style={[tw("text-sm"),{color:"#59C1CC"}]}>ID: {userId}</Text>
             </View>
             
             <View style={tw("flex-row items-center justify-end")}>
-              <Text style={{color:"59C1CC"}}>
+              <Text style={{color:"#59C1CC"}}>
                 {loading ? "Loading ...": `${orders.length} x`}
               </Text>
               <Icon
@@ -37,7 +39,7 @@ const CustomerCard = ({userId, name, email}: Props) => {
                 type="entypo"
                 color="#59C1CC"
                 size={50}
-              />
+                />
             </View>
           </View>
         </View>
