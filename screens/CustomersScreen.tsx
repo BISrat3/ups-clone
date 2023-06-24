@@ -55,7 +55,8 @@ export type CustomersScreenNavigationProp = CompositeNavigationProp<
           )
         .map(
         ({name: ID, value:{ email, name}}: 
-          CustomerResponse) => (
+          // CustomerResponse
+          ) => (
           <CustomerCard 
             key={ID}
             email={email} 
