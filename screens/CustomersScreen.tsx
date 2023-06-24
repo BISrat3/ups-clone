@@ -51,11 +51,13 @@ export type CustomersScreenNavigationProp = CompositeNavigationProp<
 
       {data?.getCustomers
         ?.filter((customer: CustomerList) => 
-          customer.value.name.includes(input)
+          customer.value.name.includes
+          // what we match on the entry box
+          (input)
           )
         .map(
         ({name: ID, value:{ email, name}}: 
-          // CustomerResponse
+          CustomerResponse
           ) => (
           <CustomerCard 
             key={ID}
