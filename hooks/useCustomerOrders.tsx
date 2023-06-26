@@ -9,8 +9,7 @@ function useCustomerOrders(userId: string) {
 
     useEffect (() => {
         if(!data)
-        return;
-        
+        return; 
         // transforming the data that we want to play on the front end
         const orders: Order[] = data.getOrders.map(({value}: OrderResponse) => ({
             carrier: value.carrier,
@@ -30,7 +29,6 @@ function useCustomerOrders(userId: string) {
         // then I set the order to customers orders
         setOrders(customerOrders)
     }, [data, userId])
-
   return{
     loading, error, orders
   }
