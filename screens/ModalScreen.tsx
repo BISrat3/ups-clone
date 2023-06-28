@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity } from 'react-native'
+import { View, Text, TouchableOpacity, FlatList } from 'react-native'
 import React from 'react'
 import { Icon } from '@rneui/base'
 import { useTailwind } from 'tailwind-rn/dist'
@@ -9,6 +9,7 @@ import { RootStackParamList } from '../navigator/RootNavigator'
 import { TabStackParamList } from '../navigator/TabNavigator'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack'
 import useCustomerOrders from '../hooks/useCustomerOrders'
+import DeliveryCard from '../components /DeliveryCard'
 
 // when we go to the second screen layer we need to have a composition layer type
 
@@ -39,6 +40,12 @@ const ModalScreen = () => {
         <Text>{name}</Text>
         <Text>deliveries</Text>
       </View>
+      <FlatList
+        data={orders}
+        keyExtractor={order => order.trackingId}
+        renderItem={({item: order}) => <DeliveryCard order={order}/>}
+      />
+
     </View>
   )
 }
