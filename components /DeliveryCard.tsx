@@ -1,11 +1,19 @@
 import { View, Text } from 'react-native'
 import React from 'react'
+import { useTailwind } from 'tailwind-rn'
+import { Card } from '@rneui/base'
 
-const DeliveryCard = () => {
+type Props = {
+    order: Order
+}
+
+const DeliveryCard = ({order} : Props) => {
+    const tw = useTailwind()
+    
   return (
-    <View>
+    <Card>
       <Text>DeliveryCard</Text>
-    </View>
+    </Card>
   )
 }
 
