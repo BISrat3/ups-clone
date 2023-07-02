@@ -34,14 +34,26 @@ const DeliveryCard = ({order} : Props) => {
           </Text>
           <Divider color="white"/>
         </View>
-          <View>
-            <Text>
+          <View style={tw("mx-auto")}>
+            <Text style={tw("text-base text-center text-white font-bold mt-5")}>
               Address
             </Text>
-            <Text>
-              {order.Address} {order.City}
+            <Text style={tw("text-sm text-center text-white")}>
+              {order.Address}, {order.City}
+            </Text>
+            <Text style={tw("text-sm text-center italic text-white")}>
+              Shipping Cost: ${order.shippingCost}
             </Text>
           </View>
+      </View>
+      <Divider color='white'/>
+      <View style={tw("p-5")}>
+        {order.trackingItems.items.map((item) =>{
+          <View style={tw("flex-row justify-between items-center")}>
+            <Text style={tw("text-sm italic text-white")}>{item.name}</Text>
+            <Text style={tw(" text-white text-xl")}>{item.quantity}</Text>
+          </View>
+        })}
       </View>
     </Card>
   )
