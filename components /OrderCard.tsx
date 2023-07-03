@@ -25,6 +25,23 @@ const OrderCard = ({item}: Props) => {
                     {new Date(item.createdAt).toDateString()}
                 </Text>
             </View>
+
+            <View>
+                <Text style={tw("text-gray-400")}>
+                    {item.carrier} - {item.trackingId}
+                </Text>
+
+                <Text style={[tw("text-gray-500 text-xl"), {fontSize:10}]}>
+                    {item.trakingItems.customer.name}
+                </Text>
+            </View>
+
+            <View style={tw("flex-row items-center")}>
+                <Text style={[tw("text-sm"), { color:"#EB6A7C"}]}>
+                    {item.trakingItems.items.length} *
+                </Text>
+                <Icon style={tw("ml-2")} name="box" type="feather" />
+            </View>
         </View>
       </Card>
     </TouchableOpacity>
