@@ -2,6 +2,16 @@ import { View,Text,  TouchableOpacity } from 'react-native'
 import React from 'react'
 import { Card, Icon } from '@rneui/base'
 import { useTailwind } from 'tailwind-rn'
+import { CompositeNavigationProp, useNavigation } from '@react-navigation/native';
+import { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
+import { TabStackParamList } from '../navigator/TabNavigator';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { RootStackParamList } from '../navigator/RootNavigator';
+
+export type OrderScreenNavigationProp = CompositeNavigationProp<
+  BottomTabNavigationProp<TabStackParamList, "Orders">, 
+  NativeStackNavigationProp<RootStackParamList>
+>
 
 type Props = {
     item: Order
@@ -9,12 +19,13 @@ type Props = {
 
 const OrderCard = ({item}: Props) => {
     const tw = useTailwind();
+    const navigation = useNavigation<OrderScreenNavigationProp>();
 
   return (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={() => navigation.navigate("Order", {order: item})} >
       <Card containerStyle={tw("px-5 rounded-lg")}>
         <View style={tw('flex-row justify-between items-center')}>
-            <View >
+            <View>
                 <Icon
                     name="truck-delivery"
                     color={"#EB6A7C"}
@@ -37,8 +48,8 @@ const OrderCard = ({item}: Props) => {
             </View>
 
             <View style={tw("flex-row items-center")}>
-                <Text style={[tw("text-sm"), { color:"#EB6A7C"}]}>
-                    {item.trakingItems.items.length} *
+                <Text style={[tw("text-sm"), { color:"#EB6A7C" }]}>
+                    {item.trakingItems.items.length} x
                 </Text>
                 <Icon style={tw("ml-2")} name="box" type="feather" />
             </View>
