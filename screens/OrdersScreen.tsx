@@ -8,7 +8,7 @@ import { TabStackParamList } from '../navigator/TabNavigator';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useTailwind } from 'tailwind-rn';
 import useOrders from '../hooks/useOrders';
-import { Image } from '@rneui/base';
+import { Image, Button } from '@rneui/base';
 
 type OrderScreenRouteProp = RouteProp<RootStackParamList, "Order">;
 
@@ -32,16 +32,30 @@ const OrdersScreen = () => {
   }, [])
 
   return (
-    <ScrollView>
+    <ScrollView style={{backgroundColor: "#EB6A7C"}}>
       <Image 
         source={{uri: "https://links.papareact.com/m51"}}
         containerStyle={tw("w0full h-64")}
         PlaceholderContent={<ActivityIndicator/>}
       />
       <View>
-        <Button>
-
+        <Button 
+          color='pink'
+          titleStyle={{color:"gray", fontWeight:"400"}}
+          style={tw("py-2 px-5")}
+          onPress={() => setAscending(ascending)}>
+          {ascending ? "Showing: Oldest First" : "Showing: Most: Recent First"}
         </Button>
+        {orders?.sort((a,b) => {
+          if(ascending){
+            return new Date(a.createdAt) > new Date(b.createdAt) ? 1: -1;
+          } else {
+            return new Date(a.createdAt) < new Date(b.createdAt) ? 1: -1;
+          }
+        })
+        .map((order) => (
+          <OrderCard kwy={order.trackingId} item={order} />
+        ))}
       </View>
     </ScrollView>
   )
