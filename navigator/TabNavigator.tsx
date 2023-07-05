@@ -12,6 +12,8 @@ export type TabStackParamList = {
   Customers: undefined;
   Orders: undefined;
 }
+
+
 const Tab = createBottomTabNavigator<TabStackParamList>()
 
 const TabNavigator = () => {
