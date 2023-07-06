@@ -26,13 +26,14 @@ const TabNavigator = () => {
       headerShown: false,
     })
   }, [])
-  
+
   return (
     <Tab.Navigator 
       screenOptions = {({route}) => ( {
       // customization different customization below
         tabBarActiveTintColor: "#59C1CC",
         tabBarInactiveTintColor: "gray",
+        // focused- if it is clicked
         tabBarIcon: ({ focused, color, size}) => {
           if(route.name ==='Customers'){
             return (
@@ -43,7 +44,7 @@ const TabNavigator = () => {
               />
             )
           }
-          else if(route.name ==='Orders'){
+          else if(route.name ==="Orders"){
           return (
             <Icon
               name= "box"
