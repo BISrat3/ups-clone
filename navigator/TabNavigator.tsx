@@ -26,6 +26,7 @@ const TabNavigator = () => {
       headerShown: false,
     })
   }, [])
+  
   return (
     <Tab.Navigator 
       screenOptions = {({route}) => ( {
