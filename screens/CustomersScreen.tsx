@@ -14,19 +14,22 @@ import { useQuery } from '@apollo/client';
 import CustomerCard from '../components /CustomerCard';
 import CustomerList from '../components /CustomerList';
 
-export type CustomersScreenNavigationProp = CompositeNavigationProp<
-  BottomTabNavigationProp<TabStackParamList, "Customers">, NativeStackNavigationProp<RootStackParamList>
+
+// composite navigator - combined navigator
+export type CustomerScreenNavigationProp = CompositeNavigationProp<
+  BottomTabNavigationProp<TabStackParamList, "Customers">,
+  NativeStackNavigationProp<RootStackParamList>
 >
 
  const CustomersScreen = () => {
   const tw = useTailwind(); 
   // hide the header navigator 
-  const navigation = useNavigation<CustomersScreenNavigationProp>()
+  const navigation = useNavigation<CustomerScreenNavigationProp>()
   const [input, setInput] = useState<string>('');
-  const {loading, error, data} = useQuery(GET_CUSTOMERS)
+  const { loading, error, data } = useQuery(GET_CUSTOMERS)
 
   useLayoutEffect(()=> {
-    // when the UI mount 
+    // when the UI mount as well as there is dependcies
     navigation.setOptions({
       headerShown: false,
     })
@@ -46,7 +49,7 @@ export type CustomersScreenNavigationProp = CompositeNavigationProp<
         placeholder='Search by Customer'
         value={input}
         onChangeText={setInput}
-        containerStyle={tw("bg-white pt-5 pb-0 px-10")}
+        containerStyle={tw("bg-white pt-5 pb-0 px-5")}
       />
 
       {data?.getCustomers
