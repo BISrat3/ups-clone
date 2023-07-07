@@ -12,15 +12,15 @@ const useOrders = () => {
 //  create order array and access the order 
 //  transforming the data that we would like to use or manipulate in
         const orders: Order[] = data.getOrders.map(({value}: OrderResponse) => ({
-            carrier: value.carrier,
-            createdAt: value.createdAt,
-            shippingCost: value.shippingCost,
-            trackingId: value.trackingId,
-            trackingItems: value.trakingItems,
-            Address: value.Address,
-            City: value.City,
-            Lat: value.Lat,
-            Lng: value.Lng,
+          Address: value.Address,
+          City: value.City,
+          Lat: value.Lat,
+          Lng: value.Lng,
+          carrier: value.carrier,
+          createdAt: value.createdAt,
+          shippingCost: value.shippingCost,
+          trackingId: value.trackingId,
+          trackingItems: value.trackingItems,
         }))
         
         setOrders(orders)

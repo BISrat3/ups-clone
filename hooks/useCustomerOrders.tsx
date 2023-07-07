@@ -8,23 +8,25 @@ function useCustomerOrders(userId: string) {
     const [orders, setOrders] = useState <Order[]>([])
 
     useEffect (() => {
+      // if there is no data then return or stop there
         if(!data)
         return; 
         // transforming the data that we want to play on the front end
         const orders: Order[] = data.getOrders.map(({value}: OrderResponse) => ({
-            carrier: value.carrier,
-            createdAt: value.createdAt,
-            shippingCost: value.shippingCost,
-            trackingId: value.trackingId,
-            trackingItems: value.trackingItems,
-            Address: value.Address,
-            City: value.City,
-            Lat: value.Lat,
-            Lng: value.Lng,
+          Address: value.Address,
+          City: value.City,
+          Lat: value.Lat,
+          Lng: value.Lng,
+          carrier: value.carrier,
+          createdAt: value.createdAt,
+          shippingCost: value.shippingCost,
+          trackingId: value.trackingId,
+          trackingItems: value.trackingItems,
         }))
+        // filter the data based on the customer data
         const customerOrders = orders.filter(
           // checking for every orders that I'm taking in 
-            (order) => order.trackingItems.customer_id === userId
+            (order) => order.trackingItems === userId
         )
         // then I set the order to customers orders
         setOrders(customerOrders)
