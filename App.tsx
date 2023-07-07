@@ -8,7 +8,7 @@ import CustomersScreen from './screens/CustomersScreen';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 
 const client = new ApolloClient({
-  uri: 'http://localhost:5001/api/hoping-lynx',
+  uri: 'https://dashboard.stepzen.com/explorer?endpoint=api%2Fhoping-lynx',
   cache: new InMemoryCache(),
 });
 

@@ -16,7 +16,7 @@ function useCustomerOrders(userId: string) {
             createdAt: value.createdAt,
             shippingCost: value.shippingCost,
             trackingId: value.trackingId,
-            trackingItems: value.trakingItems,
+            trackingItems: value.,
             Address: value.Address,
             City: value.City,
             Lat: value.Lat,
