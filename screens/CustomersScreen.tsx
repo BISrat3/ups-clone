@@ -25,7 +25,7 @@ export type CustomerScreenNavigationProp = CompositeNavigationProp<
   const tw = useTailwind(); 
   // hide the header navigator 
   const navigation = useNavigation<CustomerScreenNavigationProp>()
-  const [input, setInput] = useState<string>('');
+  const [input, setInput] = useState<string>("");
   const { loading, error, data } = useQuery(GET_CUSTOMERS)
 
   useLayoutEffect(()=> {
@@ -49,7 +49,7 @@ export type CustomerScreenNavigationProp = CompositeNavigationProp<
         placeholder='Search by Customer'
         value={input}
         onChangeText={setInput}
-        containerStyle={tw("bg-white pt-5 pb-0 px-5")}
+        containerStyle={tw("bg-white pt-5 pb-0 px-10")}
       />
 
       {data?.getCustomers
