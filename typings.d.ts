@@ -30,7 +30,7 @@ type Order= {
     createdAt: string;
     shippingCost: number;
     trackingId: string;
-    trakingItems: string;
+    trackingItems: string;
     Lat: number;
     Lng: number;
     Address: string;

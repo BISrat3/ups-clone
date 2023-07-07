@@ -16,7 +16,7 @@ function useCustomerOrders(userId: string) {
             createdAt: value.createdAt,
             shippingCost: value.shippingCost,
             trackingId: value.trackingId,
-            trackingItems: value.,
+            trackingItems: value.trackingItems,
             Address: value.Address,
             City: value.City,
             Lat: value.Lat,
@@ -24,7 +24,7 @@ function useCustomerOrders(userId: string) {
         }))
         const customerOrders = orders.filter(
           // checking for every orders that I'm taking in 
-            (order) => order.trakingItems.customer_id === userId
+            (order) => order.trackingItems.customer_id === userId
         )
         // then I set the order to customers orders
         setOrders(customerOrders)
