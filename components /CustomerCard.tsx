@@ -3,7 +3,7 @@ import React from 'react'
 import useCustomerOrders from '../hooks/useCustomerOrders'
 import { useTailwind } from 'tailwind-rn/dist';
 import { useNavigation } from '@react-navigation/native';
-import { CustomersScreenNavigationProp } from '../screens/CustomersScreen';
+import { CustomerScreenNavigationProp } from '../screens/CustomersScreen';
 import { Card, Icon } from '@rneui/base';
 
 type Props = {
@@ -17,7 +17,7 @@ const CustomerCard = ({email, name, userId}: Props) => {
   // destructure the props into userId, name, email
   const {loading, error, orders} = useCustomerOrders(userId)
   const tw = useTailwind();
-  const navigation = useNavigation<CustomersScreenNavigationProp>()
+  const navigation = useNavigation<CustomerScreenNavigationProp>()
 
   return (
     <TouchableOpacity 
