@@ -43,13 +43,13 @@ const OrderCard = ({item}: Props) => {
                 </Text>
 
                 <Text style={[tw("text-gray-500 text-xl"), {fontSize:10}]}>
-                    {item.trakingItems.customer.name}
+                    {item.trackingItems.customer.name}
                 </Text>
             </View>
 
             <View style={tw("flex-row items-center")}>
                 <Text style={[tw("text-sm"), { color:"#EB6A7C" }]}>
-                    {item.trakingItems.items.length} x
+                    {item.trackingItems.items.length} x
                 </Text>
                 <Icon style={tw("ml-2")} name="box" type="feather" />
             </View>

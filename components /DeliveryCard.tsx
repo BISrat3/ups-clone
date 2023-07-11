@@ -62,7 +62,7 @@ const DeliveryCard = ({order, fullWidth} : Props) => {
       <Divider color='white'/>
 
       <View style={tw("p-5")}>
-        {order.trakingItems.items.map((item) => (
+        {order.trackingItems.items.map((item) => (
             <View key= {item.item_id} style={tw("flex-row justify-between items-center")}>
             <Text style={tw("text-sm italic text-white")}>{item.name}</Text>
             <Text style={tw(" text-white text-xl")}> x {item.quantity}</Text>
