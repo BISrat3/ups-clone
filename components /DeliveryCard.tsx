@@ -41,7 +41,6 @@ const DeliveryCard = ({order, fullWidth} : Props) => {
               Expected Delivery : {new Date(order.createdAt).toLocaleDateString()
               }
             </Text>
-
             <Divider color="white"/>
 
           </View>

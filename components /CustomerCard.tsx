@@ -12,7 +12,6 @@ type Props = {
   email: string;
 }
 
-
 const CustomerCard = ({email, name, userId}: Props) => {
   // destructure the props into userId, name, email
   const {loading, error, orders} = useCustomerOrders(userId)

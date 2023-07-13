@@ -22,7 +22,6 @@ const useOrders = () => {
           trackingId: value.trackingId,
           trackingItems: value.trackingItems,
         }))
-        
         setOrders(orders)
     }, [data])
 
