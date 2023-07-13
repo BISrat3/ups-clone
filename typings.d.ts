@@ -25,6 +25,11 @@ type OrderResponse= {
     value: Order;
 }
 
+type CustomerResponse= {
+    name: ID;
+    value: Customer;
+}
+
 type Order= {
     Address: string;
     City: string;
