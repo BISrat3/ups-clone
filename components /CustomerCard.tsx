@@ -31,7 +31,6 @@ const CustomerCard = ({email, name, userId}: Props) => {
               <Text style={tw("text-2xl font-bold")}>{name}</Text>
               <Text style={[tw("text-sm"),{color:"#59C1CC"}]}>ID: {userId}</Text>
             </View>
-            
             <View style={tw("flex-row items-center justify-end")}>
               <Text style={{color:"#59C1CC"}}>
                 {loading ? "Loading ...": `${orders.length} x`}
@@ -42,7 +41,7 @@ const CustomerCard = ({email, name, userId}: Props) => {
                 type="entypo"
                 color="#59C1CC"
                 size={50}
-                />
+              />
             </View>
           </View>
         </View>
