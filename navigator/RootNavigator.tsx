@@ -35,7 +35,7 @@ const RootNavigator = () => {
         options ={{ headerShown: false}}
         name="MyModal" 
         component={ModalScreen}
-        />
+      />
       </RootStack.Group>
 
       <RootStack.Group>

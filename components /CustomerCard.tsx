@@ -20,9 +20,10 @@ const CustomerCard = ({email, name, userId}: Props) => {
 
   return (
     <TouchableOpacity 
-      onPress={() => navigation.navigate('MyModal', {
-      name: name,
-      userId:userId,
+      onPress={() => 
+        navigation.navigate('MyModal', {
+          name: name,
+          userId:userId,
     })}>
       <Card containerStyle={tw("p-5 rounded-lg")}>
         <View>

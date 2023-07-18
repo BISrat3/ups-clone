@@ -21,7 +21,7 @@ export type CustomerScreenNavigationProp = CompositeNavigationProp<
   NativeStackNavigationProp<RootStackParamList>
 >
 
- const CustomersScreen = () => {
+const CustomersScreen = () => {
   const tw = useTailwind(); 
   // hide the header navigator 
   const navigation = useNavigation<CustomerScreenNavigationProp>()
