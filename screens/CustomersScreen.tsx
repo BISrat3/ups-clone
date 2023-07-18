@@ -55,7 +55,7 @@ export type CustomerScreenNavigationProp = CompositeNavigationProp<
       {data?.getCustomers
         ?.filter((customer: CustomerList) => 
           customer.value.name.includes
-          // what we match on the entry box
+          // what we map into the entry box
           (input)
           )
         .map(
