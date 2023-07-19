@@ -23,7 +23,8 @@ const RootNavigator = () => {
     <RootStack.Navigator>
       <RootStack.Group>
         {/*  */}
-        <RootStack.Screen name="Main" component={TabNavigator}/>
+        <RootStack.Screen 
+          name="Main" component={TabNavigator}/>
       </RootStack.Group>
 
       <RootStack.Group 
