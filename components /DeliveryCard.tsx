@@ -19,7 +19,7 @@ const DeliveryCard = ({order, fullWidth} : Props) => {
       {
         backgroundColor: fullWidth ? "#EB6A7C" : "#59C1CC",
         padding:0,
-        paddingtop:16,
+        paddingTop:16,
         ShadowColor:"black",
         shadowOffset:{ width:0, height:2 },
         shadowOpacity:0.2,
