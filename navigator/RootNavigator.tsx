@@ -16,7 +16,7 @@ export type RootStackParamList = {
   }
 }
 
-const RootStack = createNativeStackNavigator<RootStackParamList>()
+const RootStack = createNativeStackNavigator()
 
 const RootNavigator = () => {
   return (
@@ -27,7 +27,7 @@ const RootNavigator = () => {
           name="Main" component={TabNavigator}/>
       </RootStack.Group>
 
-      <RootStack.Group 
+      {/* <RootStack.Group 
         screenOptions={{
         presentation: "modal", 
       }}>
@@ -41,7 +41,7 @@ const RootNavigator = () => {
 
       <RootStack.Group>
         <RootStack.Screen name="Order" component={OrderScreen} />
-      </RootStack.Group>
+      </RootStack.Group> */}
     </RootStack.Navigator>
   )
 }
