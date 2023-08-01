@@ -36,11 +36,11 @@ const OrdersScreen = () => {
     <ScrollView style={{backgroundColor: "#EB6A7C"}}>
       <Image 
         source={{uri: "https://links.papareact.com/m51"}}
-        containerStyle={tw("w0full h-64")}
+        containerStyle={tw("w-full h-64")}
         PlaceholderContent={<ActivityIndicator/>}
       />
       <View>
-        <Button 
+        <Button
           color='pink'
           titleStyle={{color:"gray", fontWeight:"400"}}
           style={tw("py-2 px-5")}
