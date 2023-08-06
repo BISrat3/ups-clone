@@ -13,7 +13,6 @@ export type TabStackParamList = {
   Orders: undefined;
 }
 
-
 const Tab = createBottomTabNavigator<TabStackParamList>()
 
 const TabNavigator = () => {
