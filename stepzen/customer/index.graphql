@@ -3,7 +3,7 @@ type Customer {
   name: String
 }
 
-# cusomer list is the return type
+# customer list is the return type
 type CustomerList{
   name: ID
   value: Customer
