@@ -15,7 +15,7 @@ import CustomerCard from '../components /CustomerCard';
 import CustomerList from '../components /CustomerList';
 
 
-// composite navigator - combined navigator
+// composite navigator - combined navigator - helps to navigate any kind of problem
 export type CustomerScreenNavigationProp = CompositeNavigationProp<
   BottomTabNavigationProp<TabStackParamList, "Customers">,
   NativeStackNavigationProp<RootStackParamList>
