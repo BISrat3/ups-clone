@@ -20,7 +20,7 @@ const TabNavigator = () => {
   const navigation = useNavigation();
   
   useLayoutEffect (() => {
-    //  to get rid of the navigator menu
+    // to get rid of the navigator menu
     navigation.setOptions ({
       headerShown: false,
     })
