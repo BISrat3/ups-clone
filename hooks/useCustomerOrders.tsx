@@ -26,6 +26,7 @@ function useCustomerOrders(userId: string) {
         // filter the data based on the customer data
         const customerOrders = orders.filter(
           // checking for every orders that I'm taking in 
+          // test customer id
             (order) => order.trackingItems.customer_id === userId
         )
         // then I set the order to customers orders
