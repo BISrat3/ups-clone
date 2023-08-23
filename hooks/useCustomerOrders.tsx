@@ -32,7 +32,6 @@ function useCustomerOrders(userId: string) {
         // then I set the order to customers orders
         setOrders(customerOrders)
     }, [data, userId])
-    
   return{
     loading, error, orders
   }
