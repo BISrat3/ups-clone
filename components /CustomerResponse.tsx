@@ -5,7 +5,7 @@ const CustomerResponse = () => {
   
   return (
     <View>
-      <Text>CustomerResponse</Text>
+      <Text>Response</Text>
     </View>
   )
 }
