@@ -27,7 +27,11 @@ const OrdersScreen = () => {
     navigation.setOptions({
       headerShown:false,
       tabBarLabel: ({focused, color})=> {
-        <Text style={{color:focused ? "#EB6A7C" : color, fontSize:10 }}>Orders</Text>
+        <Text 
+          style={{color:focused ? "#EB6A7C" : color, fontSize:10 }}
+        >
+            Orders
+        </Text>
       }
     })
   }, [])
