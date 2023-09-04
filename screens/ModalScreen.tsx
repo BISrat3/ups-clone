@@ -12,7 +12,6 @@ import useCustomerOrders from '../hooks/useCustomerOrders'
 import DeliveryCard from '../components /DeliveryCard'
 
 // when we go to the second screen layer we need to have a composition layer type
-
 type ModalScreenNavigationProp = CompositeNavigationProp<
 BottomTabNavigationProp<TabStackParamList>,
 NativeStackNavigationProp<RootStackParamList, "MyModal">
