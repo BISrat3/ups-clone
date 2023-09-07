@@ -18,7 +18,7 @@ const Tab = createBottomTabNavigator<TabStackParamList>()
 const TabNavigator = () => {
   // not show a navigator or header
   const navigation = useNavigation();
-  
+
   useLayoutEffect (() => {
     // to get rid of the navigator menu
     navigation.setOptions ({
@@ -54,8 +54,12 @@ const TabNavigator = () => {
         }
       }
     })}>
-      <Tab.Screen name="Customers" component={CustomersScreen} />
-      <Tab.Screen name="Orders" component={OrdersScreen} />
+      <Tab.Screen 
+        name="Customers" component={CustomersScreen} 
+      />
+      <Tab.Screen 
+        name="Orders" component={OrdersScreen} 
+        />
     </Tab.Navigator>
   )
 }

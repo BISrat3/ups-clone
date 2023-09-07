@@ -24,7 +24,8 @@ const RootNavigator = () => {
       <RootStack.Group>
         {/*  */}
         <RootStack.Screen 
-          name="Main" component={TabNavigator}/>
+          name="Main" component={TabNavigator}
+        />
       </RootStack.Group>
 
       <RootStack.Group 
@@ -40,7 +41,9 @@ const RootNavigator = () => {
       </RootStack.Group>
 
       <RootStack.Group>
-        <RootStack.Screen name="Order" component={OrderScreen} />
+        <RootStack.Screen 
+          name="Order" component={OrderScreen} 
+        />
       </RootStack.Group>
     </RootStack.Navigator>
   )
